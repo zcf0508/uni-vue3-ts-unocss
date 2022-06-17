@@ -3,7 +3,10 @@ import { unocssToUniProcess } from "vite-plugin-unocss-to-uni";
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    {
+      ...presetUno(),
+      preflights: undefined,
+    },
     presetIcons({
       // 其他选项
       prefix: "i-",
