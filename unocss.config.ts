@@ -1,11 +1,19 @@
-import { defineConfig, presetUno, presetIcons } from "unocss";
+import { defineConfig, presetUno, presetIcons, PreflightContext, entriesToCss } from "unocss";
 import { unocssToUniProcess } from "vite-plugin-unocss-to-uni";
 
 export default defineConfig({
   presets: [
     {
       ...presetUno(),
-      preflights: undefined,
+      preflights: [
+        {
+          layer: "preflights",
+          getCSS(ctx: PreflightContext<any>) {
+            if (ctx.theme.preflightBase)
+              return `page,::before,::after{${entriesToCss(Object.entries(ctx.theme.preflightBase))}}`;
+          },
+        },
+      ],
     },
     presetIcons({
       // 其他选项

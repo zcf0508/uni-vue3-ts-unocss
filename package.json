@@ -73,7 +73,7 @@
     "unplugin-auto-import": "^0.8.7",
     "unplugin-vue-components": "^0.19.6",
     "vite": "^2.9.9",
-    "vite-plugin-unocss-to-uni": "^0.0.14",
+    "vite-plugin-unocss-to-uni": "^0.0.16",
     "yorkie": "^2.0.0"
   }
 }
