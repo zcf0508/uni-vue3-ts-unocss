@@ -5,4 +5,7 @@ dist-ssr
 *.local
 yarn.lock
 yarn-error.log
+pnpm-lock.yaml
 stats.html
+src/auto-import.d.ts
+src/components.d.ts

@@ -5,10 +5,12 @@ import Unocss from "unocss/vite";
 import { UnocssToUni } from "vite-plugin-unocss-to-uni";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
+import { viteCommonjs } from '@originjs/vite-plugin-commonjs'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
   let plugins = [
+    viteCommonjs(),
     AutoImport({
       /* options */
       include: [
