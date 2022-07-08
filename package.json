@@ -75,6 +75,7 @@
     "unplugin-vue-components": "^0.19.6",
     "vite": "^2.9.9",
     "vite-plugin-unocss-to-uni": "^0.0.16",
+    "vitest": "^0.17.1",
     "yorkie": "^2.0.0"
   }
 }
