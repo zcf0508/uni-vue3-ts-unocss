@@ -1,20 +1,14 @@
-import { defineConfig, presetUno, presetIcons, PreflightContext, entriesToCss } from "unocss";
-import { unocssToUniProcess } from "vite-plugin-unocss-to-uni";
+import { defineConfig, presetIcons } from "unocss";
+import {
+  presetApplet,
+  presetRemToRpx,
+  transformerApplet,
+} from 'unocss-applet'
 
 export default defineConfig({
   presets: [
-    {
-      ...presetUno(),
-      preflights: [
-        {
-          layer: "preflights",
-          getCSS(ctx: PreflightContext<any>) {
-            if (ctx.theme.preflightBase)
-              return `page,::before,::after{${entriesToCss(Object.entries(ctx.theme.preflightBase))}}`;
-          },
-        },
-      ],
-    },
+    presetApplet(),
+    presetRemToRpx(),
     presetIcons({
       // 其他选项
       prefix: "i-",
@@ -23,9 +17,7 @@ export default defineConfig({
       },
     }),
   ],
-
-  postprocess: (t) => {
-    t.selector = unocssToUniProcess(t.selector);
-    return t;
-  },
+  transformers: [
+    transformerApplet(),
+  ],
 });
