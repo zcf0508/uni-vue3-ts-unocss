@@ -9,7 +9,7 @@ module.exports = {
     parser: "@typescript-eslint/parser",
     sourceType: "module",
   },
-  plugins: ["vue", "@typescript-eslint", "prettier"],
+  plugins: ["vue", "@typescript-eslint"],
   rules: {
     indent: ["error", 2, { SwitchCase: 1 }],
     "max-len": [
@@ -22,5 +22,6 @@ module.exports = {
     ],
     "comma-dangle": ["error", "always-multiline"],
     "vue/multi-word-component-names": [0],
+    quotes: ["error", "double"],
   },
 };
