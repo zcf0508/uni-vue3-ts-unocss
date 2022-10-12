@@ -2,7 +2,6 @@ import * as path from "path";
 import { defineConfig } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
 import Unocss from "unocss/vite";
-import { UnocssToUni } from "vite-plugin-unocss-to-uni";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { viteCommonjs } from "@originjs/vite-plugin-commonjs";
@@ -38,7 +37,6 @@ export default defineConfig(({ command, mode }) => {
     uni(),
 
     Unocss(),
-    UnocssToUni(),
   ];
 
   return {
