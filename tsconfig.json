@@ -15,13 +15,17 @@
       "dom"
     ],
     "types": [
-      "@dcloudio/types"
+      "@dcloudio/types",
+      "@uni-helper/uni-app-types"
     ],
     "paths": {
       "@/*": [
         "./src/*"
       ]
     }
+  },
+  "vueCompilerOptions": {
+    "nativeTags": ["block", "component", "template", "slot"]
   },
   "exclude": ["dist", "node_modules"]
 }

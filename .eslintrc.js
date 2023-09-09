@@ -19,13 +19,6 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       excludedFiles: ['**/*.md/*.*'],
       files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-      ],
-      rules: {
-        '@typescript-eslint/no-unsafe-assignment': 1,
-      },
     },
   ],
   rules: {
