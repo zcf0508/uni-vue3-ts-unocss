@@ -1,6 +1,10 @@
 {
-    "recommendations": [
-        "vue.volar",
-        "voorjaar.windicss-intellisense"
-    ]
+  "recommendations": [
+      "vue.volar",
+      "vue.vscode-typescript-vue-plugin",
+      "antfu.unocss",
+      "bradlc.vscode-tailwindcss",
+      "yoavbls.pretty-ts-errors",
+      "zcf0508.vue-hook-optimizer-ext",
+  ]
 }

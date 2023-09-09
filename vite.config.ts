@@ -1,14 +1,14 @@
-import * as path from "path";
-import { defineConfig } from "vite";
-import uni from "@dcloudio/vite-plugin-uni";
-import Unocss from "unocss/vite";
-import AutoImport from "unplugin-auto-import/vite";
-import Components from "unplugin-vue-components/vite";
-import { viteCommonjs } from "@originjs/vite-plugin-commonjs";
+import * as path from 'path';
+import { defineConfig } from 'vite';
+import uni from '@dcloudio/vite-plugin-uni';
+import Unocss from 'unocss/vite';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { viteCommonjs } from '@originjs/vite-plugin-commonjs';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
-  let plugins = [
+  const plugins = [
     viteCommonjs(),
     AutoImport({
       /* options */
@@ -18,24 +18,23 @@ export default defineConfig(({ command, mode }) => {
         /\.vue\?vue/, // .vue
       ],
       imports: [
-        "vue",
-        "@vueuse/core",
+        'vue',
+        '@vueuse/core',
         // 小程序特有的生命周期等从这里引入
-        { "@dcloudio/uni-app": ["onLaunch", "onShow", "onHide"] },
+        { '@dcloudio/uni-app': ['onLaunch', 'onShow', 'onHide'] },
       ],
-      dirs: ["src/hooks", "src/store", "src/utils", "src/api"],
-      dts: "src/auto-import.d.ts",
+      dirs: ['src/hooks', 'src/store', 'src/utils', 'src/api'],
+      dts: 'src/auto-import.d.ts',
     }),
     Components({
       /* options */
-      dirs: ["src/components"],
-      extensions: ["vue"],
+      dirs: ['src/components'],
+      extensions: ['vue'],
       deep: true,
-      dts: "src/components.d.ts",
+      dts: 'src/components.d.ts',
       resolvers: [],
     }),
     uni(),
-
     Unocss(),
   ];
 
@@ -43,11 +42,11 @@ export default defineConfig(({ command, mode }) => {
     plugins,
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "./src"),
+        '@': path.resolve(__dirname, './src'),
       },
     },
     test: {
-      include: ["tests/unit/*.spec.ts"],
+      include: ['tests/unit/*.spec.ts'],
       globals: true,
     },
   };

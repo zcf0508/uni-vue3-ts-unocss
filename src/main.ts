@@ -1,8 +1,8 @@
-import { createSSRApp } from "vue";
-import App from "./App.vue";
-import { hamiVuex } from "@/store";
+import { createSSRApp } from 'vue';
+import App from './App.vue';
+import { hamiVuex } from '@/store';
 
-import "uno.css"
+import 'uno.css';
 
 export function createApp() {
   const app = createSSRApp(App);

@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-const title = ref("Hello Uniapp");
+const title = ref('Hello Uniapp');
 </script>
 
 <style>

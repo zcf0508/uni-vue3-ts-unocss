@@ -1,9 +1,9 @@
-import { defineConfig, presetIcons, presetUno } from "unocss";
+import { defineConfig, presetIcons, presetUno } from 'unocss';
 import {
   presetApplet,
   presetRemRpx,
   transformerApplet,
-} from "unocss-applet"
+} from 'unocss-applet';
 
 export default defineConfig({
   presets: [
@@ -12,9 +12,9 @@ export default defineConfig({
     presetRemRpx(),
     presetIcons({
       // 其他选项
-      prefix: "i-",
+      prefix: 'i-',
       extraProperties: {
-        display: "inline-block",
+        display: 'inline-block',
       },
     }),
   ],
