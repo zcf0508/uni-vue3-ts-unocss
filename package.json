@@ -33,7 +33,7 @@
     "format": "eslint --fix --ext .ts --ext .vue ."
   },
   "gitHooks": {
-    "pre-commit": "yarn format"
+    "pre-commit": "npm run format"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3090020230826001",
