@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import uni from '@dcloudio/vite-plugin-uni';
 import Unocss from 'unocss/vite';
 import AutoImport from 'unplugin-auto-import/vite';
+import { UniUseAutoImports } from '@uni-helper/uni-use';
 import Components from 'unplugin-vue-components/vite';
 import { viteCommonjs } from '@originjs/vite-plugin-commonjs';
 
@@ -20,6 +21,7 @@ export default defineConfig(({ command, mode }) => {
       imports: [
         'vue',
         '@vueuse/core',
+        UniUseAutoImports,
         // 小程序特有的生命周期等从这里引入
         { '@dcloudio/uni-app': ['onLaunch', 'onShow', 'onHide'] },
       ],
@@ -40,6 +42,9 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins,
+    build: {
+      target: 'es6',
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
