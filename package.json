@@ -30,10 +30,11 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "format": "eslint --fix --ext .ts --ext .vue ."
+    "lint": "eslint",
+    "format": "eslint --fix"
   },
   "gitHooks": {
-    "pre-commit": "npm run format"
+    "pre-commit": "npm run lint"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3090820231114001",
@@ -67,22 +68,16 @@
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
     "@uni-helper/uni-app-types": "^0.5.12",
+    "@uni-helper/unocss-preset-uni": "^0.2.5",
     "eslint": "^8.53.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-vue": "^9.18.1",
     "typescript": "^5.2.2",
-    "unocss": "^0.57.4",
-    "unocss-applet": "^0.7.8",
+    "unocss": "^0.57.7",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.5.0",
     "vitest": "^0.34.6",
     "yorkie": "^2.0.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "vite": "^4.4.9",
-      "rollup": "^4"
-    }
   }
 }

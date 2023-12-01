@@ -1,15 +1,9 @@
-import { defineConfig, presetIcons, presetUno } from 'unocss';
-import {
-  presetApplet,
-  presetRemRpx,
-  transformerApplet,
-} from 'unocss-applet';
+import { defineConfig, presetIcons } from 'unocss';
+import { presetUni } from '@uni-helper/unocss-preset-uni';
 
 export default defineConfig({
   presets: [
-    presetUno(),
-    presetApplet(),
-    presetRemRpx(),
+    presetUni(),
     presetIcons({
       // 其他选项
       prefix: 'i-',
@@ -17,8 +11,5 @@ export default defineConfig({
         display: 'inline-block',
       },
     }),
-  ],
-  transformers: [
-    transformerApplet(),
   ],
 });
